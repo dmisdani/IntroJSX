@@ -20,7 +20,7 @@ An extended version of the known Intro.js<br />
  Downsides: No callbacks. Actually i don't need them now, maybe later.<br />
 
 ## Test it
-![Example](https://cdn.rawgit.com/dmisdani/IntroJSX/master/index.html)
+[Example](https://cdn.rawgit.com/dmisdani/IntroJSX/master/index.html)
 
 Or Download or Clone the code and open the index.html with your Browser.
 
