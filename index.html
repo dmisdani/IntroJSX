@@ -1,0 +1,59 @@
+<html>
+
+<head>    
+    <link rel="stylesheet" type="text/css" href="css/introjs.css">    
+    <script src="js/IntroJSX.js"></script>
+</head>
+
+<!--    IntroJSX().showHint("#save");-->
+<body onload='IntroJSX().showHint("a[badge=\"1\"]","","");'>
+	<br/>
+	<br/>
+	<br/>
+	<br/>
+	<div align="center">
+		<a id="save" badge="1" intro-step="1" intro-type="tooltip" intro-duration="2" intro-text="Hi! The intro just started! Navigate with arrows or with the buttons. Press anywhere else or ESC to stop the Introduction" href="javascript:void(0);" onclick='aaa();'>Badge Example (Press me)</a>       
+    <br/>
+    <br/>
+    <br/>
+        <a id="load" intro-step="2" intro-type="tooltip" intro-duration="2" intro-text="Step 2 !!" href="javascript:void(0);" onclick='bbb();' >Intro example (Press me)</a>
+    </div>     
+    <br/>
+    <br/>
+    <br/>
+    <a id="test2" intro-step="3" intro-type="tooltip" intro-duration="2" intro-text="Step 3, You can press here to see an introduction example with a floating tooltip!!!" href="javascript:void(0);" onclick='ccc();'>Floating tooltip example</a> 
+    <a id="test3" intro-step="5" intro-type="tooltip" intro-duration="2"  intro-text="Step 5 !!" href="javascript:void(0);" style="position:absolute; left: 48%;  bottom:0px; ">Test1</a>
+    <a id="test4" intro-step="4" intro-type="tooltip" intro-duration="2" intro-text="Click here to see an introduction with autoPlay mode on!!" href="javascript:void(0);" style="float: right" onclick='ddd();'>Test autoPlay introduction</a>
+    
+    
+    <script>
+        function aaa(){
+            var jsx = IntroJSX();   
+            jsx.setOption("defaultBadgeChar","1");
+            jsx.showHint("#load");
+        }
+        function bbb(){
+            var jsx = IntroJSX();   
+            //jsx.setOption("defaultBadgeChar","1");
+            //jsx.showHint("#load");
+            jsx.startIntro();
+        }
+        
+        function ccc(){
+            var jsx = IntroJSX();   
+            //jsx.setOption("autoPlay",true);
+            jsx.setOption("introSteps",[{"append":true,"step":3,"text": "And this is the same introduction with a floating tooltip in step 3","type": "floating","duration": 1}]); // without the append, it will replace the DOM's step 3 with this
+            jsx.startIntro();
+        }
+        
+        function ddd(){
+            var jsx = IntroJSX();
+            jsx.setOption("autoPlay",true);
+            jsx.startIntro();
+        }
+        
+    </script>
+
+
+</body>
+</html>
